@@ -1,0 +1,10 @@
+1. ¿Es un mamífero?
+2. ¿Es un animal doméstico?
+3. ¿Tiene plumas?
+4. ¿Es un animal que puede volar?
+5. ¿Vive en el agua?
+6. ¿Es conocido por su velocidad?
+7. ¿Es pequeño en tamaño?
+8. ¿Tiene cuatro patas?
+9. ¿Es carnívoro?
+10. ¿Es un insecto?
