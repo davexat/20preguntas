@@ -38,7 +38,7 @@ public class App extends Application {
         creator.crearArbol("preguntas.txt", "respuestas.txt");
         ArbolDecisionPRS<String, String> arbol = creator.getArbol();
         System.out.println(arbol.getRespuestas());
-        System.out.println(arbol.getDer().getRespuestas());
+        System.out.println(arbol.getDer().getDer().getIzq().getIzq().getRespuestas());
         launch();
     }
 
