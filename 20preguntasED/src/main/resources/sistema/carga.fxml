@@ -1,0 +1,25 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Region?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.SeleccionController" stylesheets="@../estilos/carga.css" styleClass="contenedor">
+    <children>
+        <Region minHeight="450"/>
+        <VBox styleClass="vBoxBotones">
+            <HBox >
+                <HBox styleClass="cajaCarga">
+                <Button fx:id="cargarPreguntas" styleClass="cargarPreguntas" />
+                </HBox>
+                <HBox styleClass="cajaCarga">
+                    <Button fx:id="cargarRespuestas" styleClass="cargarRespuestas" />
+                </HBox>
+            </HBox>
+            <HBox styleClass = "cajaContinuar">
+                <Button fx:id="continuar" styleClass="continuar" />
+            </HBox>
+        </VBox>
+    </children>
+</VBox>

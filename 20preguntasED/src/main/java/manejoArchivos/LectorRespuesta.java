@@ -31,7 +31,7 @@ public class LectorRespuesta {
         } catch (FileNotFoundException ex) {
             System.out.println("No se encontró el archivo");
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
+            System.out.println(ex.getMessage());
         }
         return mapa;
     }
@@ -39,7 +39,7 @@ public class LectorRespuesta {
         String datos[] = linea.split(" ");
         PilaPRS<Boolean> respuestas = new PilaPRS<>();
         for (int i=1; i < datos.length; i++){
-            final boolean respuesta = datos[i].equalsIgnoreCase("si") || datos[i].equalsIgnoreCase("sí");
+            final boolean respuesta = validarRespuesta(datos[i]);
             respuestas.push(respuesta);
         }
         return respuestas;
@@ -47,5 +47,12 @@ public class LectorRespuesta {
     public String leerRespuesta(String linea){
         String datos[] = linea.split(" ");
         return datos[0];
+    }
+    public boolean validarRespuesta(String s){
+        final boolean verdadero1 = s.equalsIgnoreCase("si");
+        final boolean verdadero2 = s.equalsIgnoreCase("sí");
+        final boolean verdadero3 = s.equals("1");
+        
+        return verdadero1 || verdadero2 || verdadero3;
     }
 }

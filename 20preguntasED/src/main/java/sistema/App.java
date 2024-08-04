@@ -38,11 +38,6 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        ArbolCreator creator = new ArbolCreator();
-        creator.crearArbol("preguntas.txt", "respuestas.txt");
-        ArbolDecisionPRS<String, String> arbol = creator.getArbol();
-        System.out.println(arbol.getRespuestas());
-        System.out.println(arbol.getDer().getDer().getIzq().getIzq().getRespuestas());
         launch();
     }
 

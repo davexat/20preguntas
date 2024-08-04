@@ -7,6 +7,6 @@ public class InicioController {
 
     @FXML
     private void empezarJuego() throws IOException {
-        App.setRoot("preguntas");
+        App.setRoot("carga");
     }
 }

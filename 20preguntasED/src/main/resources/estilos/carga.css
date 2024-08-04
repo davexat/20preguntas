@@ -1,0 +1,60 @@
+.contenedor {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 720px;
+    -fx-alignment: center;
+    -fx-background-image: url("/img/cargaArchivosFondo.png");
+    -fx-background-size: cover;
+}
+
+.vBoxBotones {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 254px;
+    -fx-alignment: center;
+}
+
+.cajaCarga {
+    -fx-pref-width: 640px;
+    -fx-pref-height: 104px;
+    -fx-alignment: center;
+}
+
+.cajaContinuar {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 150px;
+    -fx-alignment: center;
+}
+
+.cargarPreguntas {
+    -fx-pref-width: 88px;
+    -fx-pref-height: 104px;
+    -fx-background-image: url("/img/cargarArchivoPreguntas.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+.cargarRespuestas {
+    -fx-pref-width: 88px;
+    -fx-pref-height: 104px;
+    -fx-background-image: url("/img/cargarArchivoRespuestas.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+.continuar {
+    -fx-pref-width: 205px;
+    -fx-pref-height: 60px;
+    -fx-background-image: url("/img/botonCargaApagado.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.continuar:hover {
+    -fx-background-image: url("/img/botonCargaEncendido.png");
+}

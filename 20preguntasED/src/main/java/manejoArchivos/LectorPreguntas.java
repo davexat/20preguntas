@@ -19,11 +19,12 @@ public class LectorPreguntas {
     public PilaPRS<String> leerArchivo(String archivoPreguntas){
         PilaPRS<String> pila = new PilaPRS<>();
         try (BufferedReader bf = new BufferedReader(new FileReader(new File("src/main/resources/files/"+archivoPreguntas)))){
-            String linea = bf.readLine();
+            String linea = bf.readLine().trim();
             int limite = 20;
             while (linea != null && (--limite) >= 0){
                 pila.push(linea);
                 linea = bf.readLine();
+                if (linea != null) linea = linea.trim();
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Archivo no encontrado");
