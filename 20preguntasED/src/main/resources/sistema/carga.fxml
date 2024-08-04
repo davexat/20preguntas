@@ -14,27 +14,27 @@
     <children>
         <Region minHeight="450" />
         <VBox styleClass="vBoxBotones">
-           <children>
-               <HBox>
-                  <children>
-                      <HBox styleClass="cajaCarga">
-                         <children>
-                         <Button fx:id="cargarPreguntas" onAction="#subirArchivo" styleClass="cargarPreguntas" />
-                         </children>
-                      </HBox>
-                      <HBox styleClass="cajaCarga">
-                         <children>
-                             <Button fx:id="cargarRespuestas" onAction="#subirArchivo" styleClass="cargarRespuestas" />
-                         </children>
-                      </HBox>
-                  </children>
-               </HBox>
-               <HBox styleClass="cajaContinuar">
-                  <children>
-                      <Button fx:id="continuar" onAction="#next" styleClass="continuar" />
-                  </children>
-               </HBox>
-           </children>
+            <children>
+                <HBox>
+                    <children>
+                        <HBox styleClass="cajaCarga">
+                            <children>
+                                <Button fx:id="cargarPreguntas" onAction="#subirArchivo" styleClass="cargarPreguntas" />
+                            </children>
+                        </HBox>
+                        <HBox styleClass="cajaCarga">
+                            <children>
+                                <Button fx:id="cargarRespuestas" onAction="#subirArchivo" styleClass="cargarRespuestas" />
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox styleClass="cajaContinuar">
+                    <children>
+                        <Button fx:id="continuar" onAction="#next" styleClass="continuar" />
+                    </children>
+                </HBox>
+            </children>
         </VBox>
     </children>
 </VBox>

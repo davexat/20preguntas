@@ -44,6 +44,12 @@
     -fx-padding: 0;
     -fx-border-width: 0;
 }
+
+.labelCarga {
+    -fx-font-family: "monospace";
+    -fx-font-size: 10pt;
+}
+
 .continuar {
     -fx-pref-width: 205px;
     -fx-pref-height: 60px;

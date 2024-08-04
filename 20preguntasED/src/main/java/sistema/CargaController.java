@@ -24,8 +24,7 @@ import javafx.stage.Stage;
  * @author User
  */
 public class CargaController implements Initializable {
-
-
+    
     @FXML
     private Button cargarPreguntas;
     @FXML

@@ -6,13 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class SeleccionController {
-    public static int preguntas = 0;
-    @FXML
-    Label cantidadPreguntas;
-    @FXML
-    private Button disminuirPreguntas;
-    @FXML
-    private Button aumentarPreguntas;
+    @FXML Label cantidadPreguntas;
     
     private void setLabelPreguntas(int i){
         cantidadPreguntas.setText(String.valueOf(i));
@@ -20,17 +14,17 @@ public class SeleccionController {
     
     @FXML
     private void aumentarPreguntas() throws IOException {
-        if (preguntas < 20){
-            preguntas++;
-            setLabelPreguntas(preguntas);
+        if (JuegoController.preguntas < 20){
+            JuegoController.preguntas++;
+            setLabelPreguntas(JuegoController.preguntas);
         }
     }
     
     @FXML
     private void disminuirPreguntas() throws IOException {
-        if (preguntas > 0){
-            preguntas--;
-            setLabelPreguntas(preguntas);
+        if (JuegoController.preguntas > 0){
+            JuegoController.preguntas--;
+            setLabelPreguntas(JuegoController.preguntas);
         }
     }
 }
