@@ -1,1 +1,22 @@
+.contenedor {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 720px;
+    -fx-alignment: center;
+    -fx-background-image: url("/img/fondo.png");
+    -fx-background-size: cover;
+}
 
+.botonInicio {
+    -fx-background-image: url("/img/botonInicio.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-pref-width: 270px;
+    -fx-pref-height: 108px;
+}
+
+.botonInicio:hover {
+    -fx-background-image: url("/img/botonInicio2.png");
+}
