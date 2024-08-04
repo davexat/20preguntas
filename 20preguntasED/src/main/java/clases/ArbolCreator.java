@@ -24,10 +24,19 @@ public class ArbolCreator {
         LectorRespuesta lr = new LectorRespuesta();
         PilaPRS<String> preguntas = lp.leerArchivo(archivoPreguntas);
         HashMap<String, PilaPRS<Boolean>> respuestas = lr.leerArchivo(archivoRespuestas);
-        arbol = new ArbolDecisionPRS<>();
-        arbol.addPreguntasRespuestas(preguntas, respuestas);
+        if(preguntas != null && respuestas != null){
+            arbol = new ArbolDecisionPRS<>();
+            arbol.addPreguntasRespuestas(preguntas, respuestas);
+        }else{
+            arbol = null;
+        }
     }
+    
     public ArbolDecisionPRS<String,String> getArbol(){
         return arbol;
     }
+    
+    public boolean validarContinuacion(){
+        return arbol!=null;
+    } 
 }

@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
@@ -5,21 +10,31 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.Region?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.SeleccionController" stylesheets="@../estilos/carga.css" styleClass="contenedor">
+<VBox styleClass="contenedor" stylesheets="@../estilos/carga.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.CargaController">
     <children>
-        <Region minHeight="450"/>
+        <Region minHeight="450" />
         <VBox styleClass="vBoxBotones">
-            <HBox >
-                <HBox styleClass="cajaCarga">
-                <Button fx:id="cargarPreguntas" styleClass="cargarPreguntas" />
-                </HBox>
-                <HBox styleClass="cajaCarga">
-                    <Button fx:id="cargarRespuestas" styleClass="cargarRespuestas" />
-                </HBox>
-            </HBox>
-            <HBox styleClass = "cajaContinuar">
-                <Button fx:id="continuar" styleClass="continuar" />
-            </HBox>
+           <children>
+               <HBox>
+                  <children>
+                      <HBox styleClass="cajaCarga">
+                         <children>
+                         <Button fx:id="cargarPreguntas" onAction="#subirArchivo" styleClass="cargarPreguntas" />
+                         </children>
+                      </HBox>
+                      <HBox styleClass="cajaCarga">
+                         <children>
+                             <Button fx:id="cargarRespuestas" onAction="#subirArchivo" styleClass="cargarRespuestas" />
+                         </children>
+                      </HBox>
+                  </children>
+               </HBox>
+               <HBox styleClass="cajaContinuar">
+                  <children>
+                      <Button fx:id="continuar" onAction="#next" styleClass="continuar" />
+                  </children>
+               </HBox>
+           </children>
         </VBox>
     </children>
 </VBox>
