@@ -1,0 +1,34 @@
+.disminuirPreguntas {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-background-image: url("/img/disminuir.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.aumentarPreguntas {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-background-image: url("/img/aumentar.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.cajaLabel {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-background-image: url("/img/cantPreguntas.png");
+    -fx-background-size: cover;
+    -fx-alignment: center;
+}
+
+.cantidadPreguntas {
+    -fx-font-family: "monospace";
+    -fx-font-size: 40pt;
+}

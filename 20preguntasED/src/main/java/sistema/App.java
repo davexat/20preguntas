@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.scene.image.Image;
 
 /**
  * JavaFX App
@@ -19,8 +20,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1280, 720);
+        stage.setTitle("20preguntas");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/icono.png")));
+        scene = new Scene(loadFXML("inicio"), 1280, 720);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
