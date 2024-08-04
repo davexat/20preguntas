@@ -17,7 +17,7 @@ import manejoArchivos.*;
 public class ArbolCreator {
     private ArbolDecisionPRS<String, String> arbol;
     public ArbolCreator(){
-        arbol = new ArbolDecisionPRS<>();
+        arbol = null;
     }
     public void crearArbol(String archivoPreguntas, String archivoRespuestas){
         LectorPreguntas lp = new LectorPreguntas();

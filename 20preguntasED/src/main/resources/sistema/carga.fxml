@@ -11,10 +11,12 @@
         <VBox styleClass="vBoxBotones">
             <HBox >
                 <HBox styleClass="cajaCarga">
-                <Button fx:id="cargarPreguntas" styleClass="cargarPreguntas" />
+                    <Button fx:id="cargarPreguntas" styleClass="cargarPreguntas" />
+                    <Label text="" styleClass="labelCarga"/>
                 </HBox>
                 <HBox styleClass="cajaCarga">
                     <Button fx:id="cargarRespuestas" styleClass="cargarRespuestas" />
+                    <Label text="" styleClass="labelCarga"/>
                 </HBox>
             </HBox>
             <HBox styleClass = "cajaContinuar">
