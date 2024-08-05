@@ -14,7 +14,7 @@ public class SeleccionController {
     
     @FXML
     private void aumentarPreguntas() throws IOException {
-        if (JuegoController.preguntas < 20){
+        if (JuegoController.preguntas < 20 && JuegoController.preguntas < JuegoController.arbol.getAltura()){
             JuegoController.preguntas++;
             setLabelPreguntas(JuegoController.preguntas);
         }
@@ -22,7 +22,7 @@ public class SeleccionController {
     
     @FXML
     private void disminuirPreguntas() throws IOException {
-        if (JuegoController.preguntas > 0){
+        if (JuegoController.preguntas > 1){
             JuegoController.preguntas--;
             setLabelPreguntas(JuegoController.preguntas);
         }
