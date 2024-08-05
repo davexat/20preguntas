@@ -11,7 +11,7 @@
         <HBox>
             <Button fx:id="disminuirPreguntas" onAction="#disminuirPreguntas" styleClass="disminuirPreguntas" />
             <VBox styleClass="cajaLabel">
-                <Label fx:id="cantidadPreguntas" text="0"  styleClass="cantidadPreguntas"/>
+                <Label fx:id="cantidadPreguntas" text="1"  styleClass="cantidadPreguntas"/>
             </VBox>
             <Button fx:id="aumentarPreguntas" onAction="#aumentarPreguntas" styleClass="aumentarPreguntas" />
         </HBox>

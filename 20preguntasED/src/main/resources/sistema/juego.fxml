@@ -9,10 +9,15 @@
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sistema.JuegoController" stylesheets="@../estilos/juego.css" styleClass="contenedor">
     <children>
         <Label fx:id="pregunta" styleClass="pregunta"/>
-        <HBox styleClass="cajaBotones">
+        <Region minHeight="250" />
+        <HBox styleClass="cajaOpciones">
             <children>
-                <Button fx:id="botonSi" onAction="#respuestaSi" styleClass="botonSi"/>
-                <Button fx:id="botonNo" onAction="#respuestaNo" styleClass="botonNo"/>
+                <HBox styleClass="cajaBotones">
+                    <Button fx:id="botonSi" onAction="#respuestaSi" styleClass="botonSi"/>
+                </HBox>
+                <HBox styleClass="cajaBotones">
+                    <Button fx:id="botonNo" onAction="#respuestaNo" styleClass="botonNo"/>
+                </HBox>
             </children>
         </HBox>
     </children>
