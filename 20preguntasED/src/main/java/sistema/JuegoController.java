@@ -5,21 +5,27 @@
 package sistema;
 
 import TDA.ArbolDecisionPRS;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 /**
  *
  * @author Pc
  */
-public class JuegoController {
+public class JuegoController implements Initializable {
     public static int preguntas = 1;
     public static ArbolDecisionPRS<String,String> arbol = null;
     public static int contador = 1;
     
     @FXML Label pregunta;
     
-    private void initialize(){
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        pregunta.setText(arbol.getContenido());
         maximoAlcanzado();
     }
     
@@ -44,7 +50,7 @@ public class JuegoController {
     }
     
     private void maximoAlcanzado(){
-        if (contador < preguntas){
+        if (contador > preguntas){
             // IR A LA SIGUIENTE VISTA
         }
     }

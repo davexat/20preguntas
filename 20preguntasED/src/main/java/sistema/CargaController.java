@@ -89,19 +89,7 @@ public class CargaController implements Initializable {
             if(ac.validarContinuacion()){
                 JuegoController.arbol = ac.getArbol();
                 
-                Stage currentStage =  (Stage) ((Node) event.getSource()).getScene().getWindow();
-                currentStage.close();
-                
-                FXMLLoader fxmlLoader = App.loadFXML("seleccion");
-                Parent root = fxmlLoader.load();
-                Scene s = new Scene(root, 300, 160);
-                Stage stage = new Stage();
-                stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/icono.png")));
-                stage.setTitle("Selección");
-                stage.setScene(s);
-                stage.setResizable(false);
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.show();
+                App.setRoot("seleccion");
             }
         }catch (NullPointerException ex){
             Alert a = new Alert(Alert.AlertType.WARNING, "Por favor, seleccione archivos.");

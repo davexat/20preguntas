@@ -6,10 +6,8 @@
 
 .pregunta {
     -fx-font-family: "monospace";
-    -fx-font-size: 40pt;
-    -fx-pref-width: 1280px;
+    -fx-font-size: 35pt;
     -fx-wrap-text: true;
-    -fx-text-alignment: justify;
 }
 
 .cajaOpciones {

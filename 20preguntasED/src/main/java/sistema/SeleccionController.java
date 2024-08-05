@@ -42,19 +42,7 @@ public class SeleccionController {
     @FXML
     private void next(ActionEvent event) {
         try {
-            Stage currentStage =  (Stage) ((Node) event.getSource()).getScene().getWindow();
-            currentStage.close();
-            
-            FXMLLoader fxmlLoader = App.loadFXML("juego");
-            Parent root = fxmlLoader.load();
-            Scene s = new Scene(root, 600, 400);
-            Stage stage = new Stage();
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/icono.png")));
-            stage.setTitle("Juego");
-            stage.setScene(s);
-            stage.setResizable(false);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.show();
+            App.setRoot("juego");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
