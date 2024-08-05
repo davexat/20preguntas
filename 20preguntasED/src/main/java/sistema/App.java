@@ -22,19 +22,19 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         stage.setTitle("20preguntas");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/icono.png")));
-        scene = new Scene(loadFXML("inicio"), 1280, 720);
+        scene = new Scene(loadFXML("inicio").load(), 1280, 720);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        scene.setRoot(loadFXML(fxml).load());
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
+    public static FXMLLoader loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+        return fxmlLoader;
     }
 
     public static void main(String[] args) {

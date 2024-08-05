@@ -15,5 +15,6 @@
             </VBox>
             <Button fx:id="aumentarPreguntas" onAction="#aumentarPreguntas" styleClass="aumentarPreguntas" />
         </HBox>
+        <Button fx:id="continuar" onAction="#next" styleClass="continuar" />
     </children>
 </VBox>

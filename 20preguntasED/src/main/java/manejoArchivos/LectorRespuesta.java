@@ -48,7 +48,6 @@ public class LectorRespuesta {
         for (int i=1; i < datos.length; i++){
             final boolean respuesta = validarRespuesta(datos[i]);
             respuestas.push(respuesta);
-            System.out.println(respuesta);
         }
         return respuestas;
     }
