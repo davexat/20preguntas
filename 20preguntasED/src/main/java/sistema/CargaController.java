@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
@@ -41,6 +42,10 @@ public class CargaController implements Initializable {
     
     static File txtFilePreguntas;
     static File txtFileRespuestas;
+    @FXML
+    private Label lblPreguntas;
+    @FXML
+    private Label lblRespuestas;
     
     /**
      * Initializes the controller class.
@@ -49,7 +54,7 @@ public class CargaController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
+    
     @FXML
     private void subirArchivo(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -59,18 +64,21 @@ public class CargaController implements Initializable {
         
         if (file != null) {
             if(event.getSource().equals(cargarPreguntas)){
-                //lblP.setText("Selected file: " + file.getName());
+                lblPreguntas.setText(file.getName());
                 txtFilePreguntas = file;
             }else{
-                //lblR.setText("Selected file: " + file.getName());
+                lblRespuestas.setText(file.getName());
                 txtFileRespuestas = file;
             }
-        } /*else {
-            if(event.getSource().equals(cargarPreguntas))
-                lblP.setText("No file selected");
-            else
-                lblR.setText("No file selected");
-        }*/
+        } else {
+            if(event.getSource().equals(cargarPreguntas)){
+                lblPreguntas.setText("No file selected");
+                txtFilePreguntas = null;
+            }else{
+                lblRespuestas.setText("No file selected");
+                txtFilePreguntas = null;
+            }
+        }
     }
 
     @FXML
@@ -79,6 +87,8 @@ public class CargaController implements Initializable {
             ArbolCreator ac = new ArbolCreator();
             ac.crearArbol(txtFilePreguntas.getPath(), txtFileRespuestas.getPath());
             if(ac.validarContinuacion()){
+                JuegoController.arbol = ac.getArbol();
+                
                 Stage currentStage =  (Stage) ((Node) event.getSource()).getScene().getWindow();
                 currentStage.close();
                 

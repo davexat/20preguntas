@@ -14,7 +14,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class SeleccionController {
-
+    
     public static int preguntas = 0;
     @FXML
     Label cantidadPreguntas;
@@ -45,7 +45,7 @@ public class SeleccionController {
             Stage currentStage =  (Stage) ((Node) event.getSource()).getScene().getWindow();
             currentStage.close();
             
-            FXMLLoader fxmlLoader = App.loadFXML("inicio");
+            FXMLLoader fxmlLoader = App.loadFXML("juego");
             Parent root = fxmlLoader.load();
             Scene s = new Scene(root, 600, 400);
             Stage stage = new Stage();
