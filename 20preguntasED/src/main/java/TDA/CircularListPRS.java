@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
  * @author Pc
  */
 public class CircularListPRS<E> implements List<E> {
-    private Node actual;
+    private Node pointer;
     private Node primero;
     private Node ultimo;
     private int size;
@@ -173,26 +173,26 @@ public class CircularListPRS<E> implements List<E> {
         while(!pila.isEmpty()) this.add(pila.pop());
     }
     
-    public E retornarActual(){
-        return actual.contenido;
+    public E returnPointer(){
+        return pointer.contenido;
     }
     
-    public E actualNode(E element){
-        actual = this.primero;
+    public E setPointer(E element){
+        pointer = this.primero;
         if (this.contains(element)){
-            while (!actual.contenido.equals(element)) actual = actual.sig;
+            while (!pointer.contenido.equals(element)) pointer = pointer.sig;
         }
-        return actual.contenido;
+        return pointer.contenido;
     }
     
-    public E nextNode(){
-        actual = actual.sig;
-        return actual.contenido;
+    public E nextPointer(){
+        pointer = pointer.sig;
+        return pointer.contenido;
     }
     
-    public E prevNode(){
-        actual = actual.ant;
-        return actual.contenido;
+    public E previousPointer(){
+        pointer = pointer.ant;
+        return pointer.contenido;
     }
     
     @Override
@@ -206,7 +206,8 @@ public class CircularListPRS<E> implements List<E> {
     }
 
     @Override
-    public boolean contains(Object o) {        
+    public boolean contains(Object o) {
+        if (o == null) return false;
         Node i = this.primero;
         int c = 0;
         while ( (c++) < this.size ){
@@ -317,7 +318,7 @@ public class CircularListPRS<E> implements List<E> {
     public void clear() {
         this.primero = null;
         this.ultimo = null;
-        this.actual = null;
+        this.pointer = null;
         this.size = 0;
     }
 

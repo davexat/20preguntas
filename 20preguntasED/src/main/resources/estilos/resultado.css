@@ -1,0 +1,50 @@
+.contenedor {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 720px;
+    -fx-alignment: center;
+}
+
+.cajaBotones {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 720px;
+    -fx-alignment: center;
+}
+
+.info {
+    -fx-font-family: "monospace";
+    -fx-font-size: 25pt;
+    -fx-wrap-text: true;
+}
+
+.contenedorCentro{
+    -fx-pref-width: 1000px;
+    -fx-pref-height: 720px;
+    -fx-alignment: center;
+}
+
+.contenedorRespuesta {
+    -fx-pref-width: 1000px;
+    -fx-alignment: center;
+}
+
+.botonI {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 190px;
+    -fx-background-image: url("/img/flechaIzq.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.botonD {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 190px;
+    -fx-background-image: url("/img/flechaDer.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}

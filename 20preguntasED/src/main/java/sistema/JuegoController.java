@@ -5,6 +5,7 @@
 package sistema;
 
 import TDA.ArbolDecisionPRS;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -24,9 +25,13 @@ public class JuegoController implements Initializable {
     
     
     @Override
-    public void initialize(URL url, ResourceBundle rb){
+    public void initialize(URL url, ResourceBundle rb) {
         pregunta.setText(arbol.getContenido());
-        maximoAlcanzado();
+        try{
+            maximoAlcanzado();
+        }catch (IOException ioe){
+            System.out.println(ioe.getMessage());
+        }
     }
     
     private void mostrarPregunta(){
@@ -34,7 +39,7 @@ public class JuegoController implements Initializable {
     }
     
     @FXML
-    private void respuestaSi(){
+    private void respuestaSi() throws IOException{
         arbol = arbol.correrIzq();
         contador++;
         maximoAlcanzado();
@@ -42,16 +47,16 @@ public class JuegoController implements Initializable {
     }
     
     @FXML
-    private void respuestaNo(){
+    private void respuestaNo() throws IOException{
         arbol = arbol.correrDer();
         contador++;
         maximoAlcanzado();
         mostrarPregunta();
     }
     
-    private void maximoAlcanzado(){
+    private void maximoAlcanzado() throws IOException{
         if (contador > preguntas){
-            // IR A LA SIGUIENTE VISTA
+            App.setRoot("resultado");
         }
     }
 }

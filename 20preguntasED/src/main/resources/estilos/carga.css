@@ -8,13 +8,12 @@
 
 .vBoxBotones {
     -fx-pref-width: 1280px;
-    -fx-pref-height: 254px;
     -fx-alignment: center;
 }
 
 .cajaCarga {
     -fx-pref-width: 640px;
-    -fx-pref-height: 134px;
+    -fx-pref-height: 150px;
     -fx-alignment: center;
 }
 
@@ -47,7 +46,7 @@
 
 .labelCarga {
     -fx-font-family: "monospace";
-    -fx-font-size: 10pt;
+    -fx-font-size: 12pt;
 }
 
 .continuar {
