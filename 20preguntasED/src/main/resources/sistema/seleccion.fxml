@@ -2,13 +2,14 @@
 
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 
 <VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.SeleccionController" stylesheets="@../estilos/seleccion.css" styleClass="contenedor">
     <children>
-        <HBox>
+        <HBox styleClass = "contenedorBotones">
             <Button fx:id="disminuirPreguntas" onAction="#disminuirPreguntas" styleClass="disminuirPreguntas" />
             <VBox styleClass="cajaLabel">
                 <Label fx:id="cantidadPreguntas" text="1"  styleClass="cantidadPreguntas"/>
@@ -16,5 +17,6 @@
             <Button fx:id="aumentarPreguntas" onAction="#aumentarPreguntas" styleClass="aumentarPreguntas" />
         </HBox>
         <Button fx:id="continuar" onAction="#next" styleClass="continuar" />
+        <Region minHeight="50" />
     </children>
 </VBox>

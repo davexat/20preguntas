@@ -28,7 +28,7 @@ public class JuegoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         pregunta.setText(arbol.getContenido());
         try{
-            maximoAlcanzado();
+            verificacion();
         }catch (IOException ioe){
             System.out.println(ioe.getMessage());
         }
@@ -42,7 +42,7 @@ public class JuegoController implements Initializable {
     private void respuestaSi() throws IOException{
         arbol = arbol.correrIzq();
         contador++;
-        maximoAlcanzado();
+        verificacion();
         mostrarPregunta();
     }
     
@@ -50,12 +50,14 @@ public class JuegoController implements Initializable {
     private void respuestaNo() throws IOException{
         arbol = arbol.correrDer();
         contador++;
-        maximoAlcanzado();
+        verificacion();
         mostrarPregunta();
     }
     
-    private void maximoAlcanzado() throws IOException{
-        if (contador > preguntas){
+    private void verificacion() throws IOException{
+        if (arbol.getRespuestas().isEmpty() 
+                || arbol.getRespuestas().size() == 1
+                || contador > preguntas){
             App.setRoot("resultado");
         }
     }

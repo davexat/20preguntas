@@ -1,21 +1,16 @@
 package sistema;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
-public class SeleccionController {
+public class SeleccionController implements Initializable{
     
-    public static int preguntas = 0;
+    public static int preguntas = 1;
     @FXML
     Label cantidadPreguntas;
     
@@ -25,7 +20,7 @@ public class SeleccionController {
     
     @FXML
     private void aumentarPreguntas() throws IOException {
-        if (JuegoController.preguntas < 20 && JuegoController.preguntas < JuegoController.arbol.getAltura()){
+        if (JuegoController.preguntas < 20 && JuegoController.preguntas < JuegoController.arbol.getAltura()-1){
             JuegoController.preguntas++;
             setLabelPreguntas(JuegoController.preguntas);
         }
@@ -46,6 +41,11 @@ public class SeleccionController {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        setLabelPreguntas(preguntas);
     }
     
     
