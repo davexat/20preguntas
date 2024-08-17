@@ -32,7 +32,7 @@ public class ResultadoCreator {
             String animal = pilaResultados.poll();
             VBox contenedor = new VBox();
             ImageView img = asignarImagen(animal);
-            Label nombre = new Label(animal);
+            Label nombre = new Label(animal.replace("_", " "));
             decorarVBox(contenedor);
             decorarLabel(nombre);
             decorarImage(img);

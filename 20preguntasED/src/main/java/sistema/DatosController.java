@@ -120,9 +120,9 @@ public class DatosController implements Initializable {
     @FXML 
     private void continuar(){
         if (!nombreAnimal.getText().equals("") && imagenAnimal.getImage() != null){
-            String linea = nombreAnimal.getText()+" ";
+            String linea = nombreAnimal.getText().replace(" ", "_")+" ";
             linea += respuestasActuales.getText()+respuestasAdicionales.getText();
-            Path destino = Paths.get("animales/" + nombreAnimal.getText()+".png");
+            Path destino = Paths.get("animales/" + nombreAnimal.getText().replace(" ", "_")+".png");
             //Path.of("/src/main/resources/animales/", nombreAnimal.getText()+".png");
             try {
                 Files.copy(imageFile.toPath(),destino,StandardCopyOption.REPLACE_EXISTING);
