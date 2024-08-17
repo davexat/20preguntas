@@ -38,21 +38,21 @@ public class ResultadoCreator {
         }
     }
     private void decorarImage(ImageView imageView){
-        imageView.setFitWidth(400);
-        imageView.setFitHeight(400);
+        imageView.setFitWidth(300);
+        imageView.setFitHeight(300);
     }
     private void decorarVBox(VBox vbox){
-        vbox.setMaxWidth(424);
-        vbox.setPrefHeight(460);
-        vbox.setPadding(new Insets(10, 10, 40, 10));
+        vbox.setMaxWidth(324);
+        vbox.setPrefHeight(360);
+        vbox.setPadding(new Insets(10, 10, 20, 10));
         vbox.setAlignment(Pos.CENTER);
         vbox.setStyle("-fx-background-color: #f0f0f0; "
                       + "-fx-border-color: black; "
                       + "-fx-border-width: 2px; "
-                      + "-fx-spacing: 30px;");
+                      + "-fx-spacing: 25px;");
     }
     private void decorarLabel(Label label){
-        label.setFont(Font.font("monospace", FontWeight.BOLD, 40));
+        label.setFont(Font.font("monospace", FontWeight.BOLD, 35));
         label.setStyle("-fx-wrap-text: true;");
     }
     private ImageView asignarImagen(String animal){

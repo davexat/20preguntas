@@ -1,19 +1,29 @@
-Perro si no no no no no si sí
-Gato si sí no no no no sí sí
-Águila no no sí sí
-Delfín si no no no sí
-Rata si no no no no no sí
-Murciélago si no no no no sí sí sí
-Mono si no no no no sí sí sí
-Elefante si no no no no no no sí
-Pez no no no no sí no no
-Tortuga no no no no sí sí no
-Oso si no no no no sí sí sí
-Ratón si no no no no no sí no
-Pájaro no no sí sí no no no no
-Cebra si no no no no no sí no
-Serpiente no no no no sí no no
-Escorpión no no no no no no no sí
-León si no no no no no sí no
-Hámster si no no no no no sí no
-Oveja si sí no no no no no no
+León 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 0 1 0
+Gato 1 1 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0
+Águila_Calva 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+Delfín 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+Elefante 1 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 0
+Serpiente 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1
+Tortuga 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0
+Canguro 1 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 1 0
+Tigre 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0 1 0
+Cocodrilo 0 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0
+Rana 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 1 0
+Murciélago 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+Pez_payaso 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+Oso 1 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 1 0
+Jirafa 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0
+Hormiga 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0
+Pingüino 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+Lobo 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 0
+Cebra 1 0 0 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 1 0
+Panda 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 0 1 0
+Camello 1 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 0
+Zorro 1 0 0 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 1 0
+Caballo 1 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 1 0
+Koala 1 0 0 0 0 0 1 1 0 1 0 0 1 0 0 0 0 0 1 0
+Tiburón 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0
+Avestruz 0 0 1 0 0 1 0 1 1 0 0 1 0 1 0 0 0 0 1 0
+Ballena 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+Oso_Polar 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 0 1 0
+Orca 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0

@@ -55,10 +55,10 @@ public class JuegoController implements Initializable {
     }
     
     private void verificacion() throws IOException{
-        if (arbol.getRespuestas().isEmpty() 
-                || arbol.getRespuestas().size() == 1
-                || contador > preguntas){
+        if (arbol.getRespuestas().size() == 1 || contador > preguntas){
             App.setRoot("resultado");
+        }else if (arbol.getRespuestas().isEmpty()){
+            App.setRoot("agregar");
         }
     }
 }

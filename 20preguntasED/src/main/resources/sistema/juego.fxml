@@ -12,12 +12,8 @@
         <Region minHeight="250" />
         <HBox styleClass="cajaOpciones">
             <children>
-                <HBox styleClass="cajaBotones">
-                    <Button fx:id="botonSi" onAction="#respuestaSi" styleClass="botonSi"/>
-                </HBox>
-                <HBox styleClass="cajaBotones">
-                    <Button fx:id="botonNo" onAction="#respuestaNo" styleClass="botonNo"/>
-                </HBox>
+                <Button fx:id="botonSi" onAction="#respuestaSi" styleClass="botonSi"/>
+                <Button fx:id="botonNo" onAction="#respuestaNo" styleClass="botonNo"/>
             </children>
         </HBox>
     </children>

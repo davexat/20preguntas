@@ -2,36 +2,22 @@
     -fx-pref-width: 1280px;
     -fx-pref-height: 720px;
     -fx-alignment: center;
+    -fx-spacing: 200px;
 }
 
-.cajaBotones {
-    -fx-pref-width: 140px;
-    -fx-pref-height: 720px;
+.contenedorLabels {
     -fx-alignment: center;
+    -fx-spacing: 10px;
 }
 
 .info {
     -fx-font-family: "monospace";
-    -fx-font-size: 25pt;
+    -fx-font-size: 30pt;
     -fx-wrap-text: true;
-}
-
-.contenedorCentro{
-    -fx-pref-width: 1000px;
-    -fx-pref-height: 720px;
-    -fx-alignment: center;
-    -fx-spacing: 50px;
-}
-
-.contenedorRespuesta {
-    -fx-pref-width: 1000px;
-    -fx-pref-height: 400px;
     -fx-alignment: center;
 }
 
-.contenedorBotonesResultado {
-    -fx-pref-width: 1000px;
-    -fx-pref-height: 100px;
+.cajaBotones {
     -fx-alignment: center;
     -fx-spacing: 50px;
 }
@@ -51,6 +37,21 @@
     -fx-background-image: url("/img/playAgainE.png");
 }
 
+.agregar {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-background-image: url("/img/uploadAnimal.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.agregar:hover {
+    -fx-background-image: url("/img/uploadAnimalA.png");
+}
+
 .exit {
     -fx-pref-width: 100px;
     -fx-pref-height: 100px;
@@ -64,26 +65,4 @@
 
 .exit:hover {
     -fx-background-image: url("/img/exitE.png");
-}
-
-.botonI {
-    -fx-pref-width: 140px;
-    -fx-pref-height: 190px;
-    -fx-background-image: url("/img/flechaIzq.png");
-    -fx-background-size: cover;
-    -fx-background-color: transparent;
-    -fx-text-fill: transparent;
-    -fx-padding: 0;
-    -fx-border-width: 0;
-}
-
-.botonD {
-    -fx-pref-width: 140px;
-    -fx-pref-height: 190px;
-    -fx-background-image: url("/img/flechaDer.png");
-    -fx-background-size: cover;
-    -fx-background-color: transparent;
-    -fx-text-fill: transparent;
-    -fx-padding: 0;
-    -fx-border-width: 0;
 }

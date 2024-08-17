@@ -1,0 +1,11 @@
+.contenedor {
+    -fx-pref-width: 960px;
+    -fx-pref-height: 640px;
+    -fx-alignment: center;
+}
+
+.contenedorPreguntas {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 640px;
+    -fx-alignment: top-center;
+}

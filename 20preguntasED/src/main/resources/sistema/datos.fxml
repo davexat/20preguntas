@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sistema.DatosController" stylesheets="@../estilos/datos.css" styleClass="contenedor">
+    <children>
+        <VBox styleClass="contenedorPreguntas">
+            <children>
+                <Label text="Preguntas" styleClass="labelPreguntas"/>
+                <VBox fx:id="cajaPreguntas" styleClass="cajaPreguntas">
+                    <children>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox styleClass="contenedorDatos">
+            <children>
+                <Label text="Nombre del Animal: " styleClass="labelDatos"/>
+                <TextField fx:id="nombreAnimal" promptText="Ingrese el nombre del animal" />
+                <Label text="Respuestas actuales: " styleClass="labelDatos"/>
+                <Label fx:id="respuestasActuales" styleClass="labelRespuestas"/>
+                <Label text="Respuestas adicionales: " styleClass="labelDatos"/>
+                <Label fx:id="respuestasAdicionales" styleClass="labelRespuestas"/>
+                <HBox styleClass="contenedorBotones">
+                    <children>
+                        <Button fx:id="agregarSi" onAction="#agregarSi" styleClass="agregarSi"/>
+                        <Button fx:id="agregarNo" onAction="#agregarNo" styleClass="agregarNo"/>
+                        <Button fx:id="reset" onAction="#reset" styleClass="reset"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox styleClass="contenedorImagen">
+            <children>
+                <ImageView fx:id="imagenAnimal" onAction="#subirImagen" fitWidth="250" fitHeight="250" preserveRatio="true" styleClass="imagenAnimal">
+                    <image>
+                        <Image url="@.../img/subirImagen.png" />
+                    </image>
+                </ImageView>
+                <HBox>
+                    <children>
+                        <Button onAction="#continuar" styleClass="continuar"/>
+                        <Button onAction="#cancelar" styleClass="cancelar"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</HBox>

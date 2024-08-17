@@ -11,21 +11,24 @@
     <children>
         <VBox styleClass="cajaBotones">
             <children>
-                <Region minHeight="100" />
                 <Button fx:id="botonI" onAction="#correrIzq" styleClass="botonI" />
             </children>
         </VBox>
         <VBox styleClass="contenedorCentro">
             <children>
-                <Region minHeight="50" />
                 <Label text="" fx:id="info" styleClass="info"/>
-                <VBox fx:id="contenedorRespuesta" styleClass="contenedorCentro">
+                <VBox fx:id="contenedorRespuesta" styleClass="contenedorRespuesta">
                 </VBox>
+                <HBox styleClass="contenedorBotonesResultado">
+                    <children>
+                        <Button fx:id="playAgain" onAction="#playAgain" styleClass="playAgain" />
+                        <Button fx:id="exit" onAction="#exit" styleClass="exit" />
+                    </children>
+                </HBox>
             </children>
         </VBox>
         <VBox styleClass="cajaBotones">
             <children>
-                <Region minHeight="100" />
                 <Button fx:id="botonD" onAction="#correrDer" styleClass="botonD" />
             </children>
         </VBox>
