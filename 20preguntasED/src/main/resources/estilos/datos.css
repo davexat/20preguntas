@@ -1,11 +1,166 @@
 .contenedor {
     -fx-pref-width: 960px;
-    -fx-pref-height: 640px;
+    -fx-pref-height: 540px;
     -fx-alignment: center;
 }
 
 .contenedorPreguntas {
     -fx-pref-width: 300px;
-    -fx-pref-height: 640px;
+    -fx-pref-height: 540px;
     -fx-alignment: top-center;
+    -fx-padding: 10px;
+    -fx-spacing: 20px;
+}
+
+.cajaPreguntas {
+    -fx-pref-height: 440px;
+}
+
+.labelPreguntas {
+    -fx-font-family: "monospace";
+    -fx-font-size: 20pt;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+}
+
+.cajaPreguntas {
+    -fx-pref-width: 280px;
+    -fx-max-width: 280px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.contenedorDatos {
+    -fx-pref-width: 360px;
+    -fx-pref-height: 540px;
+    -fx-alignment: top-center;
+    -fx-padding: 20px;
+    -fx-spacing: 25px;
+}
+
+.labelDatos {
+    -fx-font-family: "monospace";
+    -fx-font-size: 15pt;
+    -fx-wrap-text: true;
+    -fx-pref-width: 330px;
+    -fx-aligment: center;
+}
+
+.labelRespuestas {
+    -fx-pref-width: 329px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+.campoNombre {
+    -fx-pref-width: 330px;
+}
+
+.contenedorBotones {
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+
+.agregarSi {
+    -fx-pref-width: 75px;
+    -fx-pref-height: 75px;
+    -fx-background-image: url("/img/si.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.agregarSi:hover {
+    -fx-background-image: url("/img/siE.png");
+}
+
+.agregarNo {
+    -fx-pref-width: 75px;
+    -fx-pref-height: 75px;
+    -fx-background-image: url("/img/no.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.agregarNo:hover {
+    -fx-background-image: url("/img/noE.png");
+}
+
+.reset {
+    -fx-pref-width: 75px;
+    -fx-pref-height: 75px;
+    -fx-background-image: url("/img/reset.png");
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.reset:hover {
+    -fx-background-image: url("/img/resetE.png");
+}
+
+.contenedorImagen {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 540px;
+    -fx-alignment: bottom-center;
+}
+
+.contenedorAnimal {
+    -fx-pref-width: 200px;
+    -fx-max-width: 200px;
+    -fx-max-height: 200px;
+    -fx-pref-height: 200px;
+    -fx-background-image: url("/img/subirImagen.png");
+    -fx-background-size: cover;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.imagenAnimal {
+    -fx-background-color: white;
+}
+
+.continuar {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+    -fx-background-image: url("/img/botonCargaApagado.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.continuar:hover {
+    -fx-background-image: url("/img/botonCargaEncendido.png");
+}
+
+.cancelar {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+    -fx-background-image: url("/img/botonCancelarA.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.cancelar:hover {
+    -fx-background-image: url("/img/botonCancelar.png");
 }

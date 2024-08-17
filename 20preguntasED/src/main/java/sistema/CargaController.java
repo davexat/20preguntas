@@ -48,6 +48,7 @@ public class CargaController implements Initializable {
         txtFileRespuestas = new File("src/main/resources/files/respuestas.txt");
         lblPreguntas.setText(txtFilePreguntas.getName());
         lblRespuestas.setText(txtFileRespuestas.getName());
+        DatosController.nuevoAnimal = false;
     }    
     
     @FXML

@@ -8,6 +8,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
@@ -33,6 +34,11 @@ public class AgregarController {
     }
     @FXML
     private void agregar() throws IOException{
+        if (DatosController.nuevoAnimal){
+            Alert a = new Alert(Alert.AlertType.WARNING, "Ya se ha agregado el animal.");
+            a.show();
+            return;
+        }
         Stage stage = (Stage) info.getScene().getWindow();
         Stage ventanaAgregar = new Stage();
         ventanaAgregar.initModality(Modality.WINDOW_MODAL);
@@ -42,7 +48,7 @@ public class AgregarController {
         ventanaAgregar.getIcons().add(new Image(getClass().getResourceAsStream("/img/icono.png")));
         
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("datos.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 960, 640);
+        Scene scene = new Scene(fxmlLoader.load(), 960, 540);
         ventanaAgregar.setScene(scene);
         ventanaAgregar.setResizable(false);
         ventanaAgregar.show();

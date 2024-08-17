@@ -5,27 +5,31 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
 
-<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sistema.DatosController" stylesheets="@../estilos/datos.css" styleClass="contenedor">
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sistema.DatosController"  styleClass="contenedor" stylesheets="@../estilos/datos.css">
     <children>
         <VBox styleClass="contenedorPreguntas">
             <children>
                 <Label text="Preguntas" styleClass="labelPreguntas"/>
-                <VBox fx:id="cajaPreguntas" styleClass="cajaPreguntas">
-                    <children>
-                    </children>
-                </VBox>
+                <ScrollPane hbarPolicy="AS_NEEDED" vbarPolicy="NEVER" styleClass="cajaPreguntas">
+                    <VBox fx:id="cajaPreguntas"/>
+                </ScrollPane>
             </children>
         </VBox>
         <VBox styleClass="contenedorDatos">
             <children>
-                <Label text="Nombre del Animal: " styleClass="labelDatos"/>
-                <TextField fx:id="nombreAnimal" promptText="Ingrese el nombre del animal" />
-                <Label text="Respuestas actuales: " styleClass="labelDatos"/>
+                <Label text="Nombre del Animal:" styleClass="labelDatos"/>
+                <TextField onMouseClicked="#resetearNombre" fx:id="nombreAnimal" promptText="Ingrese el nombre del animal" styleClass="campoNombre"/>
+                <Region minHeight="1"/>
+                <Label text="Respuestas actuales:" styleClass="labelDatos"/>
                 <Label fx:id="respuestasActuales" styleClass="labelRespuestas"/>
-                <Label text="Respuestas adicionales: " styleClass="labelDatos"/>
-                <Label fx:id="respuestasAdicionales" styleClass="labelRespuestas"/>
+                <Region minHeight="1"/>
+                <Label text="Respuestas adicionales:" styleClass="labelDatos"/>
+                <Label fx:id="respuestasAdicionales" text="" styleClass="labelRespuestas"/>
                 <HBox styleClass="contenedorBotones">
                     <children>
                         <Button fx:id="agregarSi" onAction="#agregarSi" styleClass="agregarSi"/>
@@ -37,17 +41,19 @@
         </VBox>
         <VBox styleClass="contenedorImagen">
             <children>
-                <ImageView fx:id="imagenAnimal" onAction="#subirImagen" fitWidth="250" fitHeight="250" preserveRatio="true" styleClass="imagenAnimal">
-                    <image>
-                        <Image url="@.../img/subirImagen.png" />
-                    </image>
-                </ImageView>
-                <HBox>
+                <HBox onMouseClicked="#subirImagen" styleClass="contenedorAnimal">
+                    <children>
+                        <ImageView fitHeight="200" fitWidth="200" preserveRatio="false" fx:id="imagenAnimal" styleClass="imagenAnimal"/>
+                    </children>
+                </HBox>
+                <Region minHeight="200"/>
+                <HBox styleClass="contenedorBotones">
                     <children>
                         <Button onAction="#continuar" styleClass="continuar"/>
                         <Button onAction="#cancelar" styleClass="cancelar"/>
                     </children>
                 </HBox>
+                <Region minHeight="10"/>
             </children>
         </VBox>
     </children>

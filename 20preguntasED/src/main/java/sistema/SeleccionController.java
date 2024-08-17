@@ -9,8 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 public class SeleccionController implements Initializable{
-    
-    public static int preguntas = 1;
     @FXML
     Label cantidadPreguntas;
     
@@ -45,7 +43,8 @@ public class SeleccionController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        setLabelPreguntas(preguntas);
+        JuegoController.preguntas = 1;
+        setLabelPreguntas(JuegoController.preguntas);
     }
     
     

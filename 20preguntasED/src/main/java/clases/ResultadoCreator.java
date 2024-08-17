@@ -5,6 +5,9 @@
 package clases;
 
 import TDA.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -56,11 +59,14 @@ public class ResultadoCreator {
         label.setStyle("-fx-wrap-text: true;");
     }
     private ImageView asignarImagen(String animal){
+        Path directorio = Paths.get("animales", animal+".png");
         ImageView img;
+        String pathExterna = System.getProperty("user.dir")+"\\animales\\";
         try{
-            img = new ImageView(new Image(getClass().getResource("/animales/"+animal+".png").toExternalForm()));
+            img = new ImageView(new Image("file:" + pathExterna + animal + ".png"));
+            if (!Files.exists(directorio)) throw new Exception();
         }catch(Exception e){
-            img = new ImageView(new Image(getClass().getResource("/animales/default.png").toExternalForm()));
+            img = new ImageView(new Image("file:" + pathExterna + "default.png"));
         }
         return img;
     }
