@@ -23,9 +23,10 @@ public class LectorPreguntas {
             String linea = bf.readLine().trim();
             int limite = 20;
             while (linea != null && (--limite) >= 0){
-                pila.push(linea);
+                String lineaAnalizar = linea.strip();
+                if (!lineaAnalizar.equals("")) pila.push(lineaAnalizar);
                 linea = bf.readLine();
-                if (linea != null) linea = linea.trim();
+                if (linea != null) linea = linea.trim();                
             }
         } catch (FileNotFoundException ex) {
             Alert a = new Alert(Alert.AlertType.ERROR, "Archivo de preguntas no encontrado. Verificar, por favor.");
