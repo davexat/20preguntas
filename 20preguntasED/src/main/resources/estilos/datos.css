@@ -2,6 +2,8 @@
     -fx-pref-width: 960px;
     -fx-pref-height: 540px;
     -fx-alignment: center;
+    -fx-background-image: url("/img/fondoDatosAnimal.png");
+    -fx-background-size: cover;
 }
 
 .contenedorPreguntas {
@@ -28,12 +30,13 @@
     -fx-max-width: 280px;
     -fx-border-color: black;
     -fx-border-width: 1px;
+    -fx-background-color: white;
 }
 
 .contenedorDatos {
     -fx-pref-width: 360px;
     -fx-pref-height: 540px;
-    -fx-alignment: top-center;
+    -fx-alignment: center;
     -fx-padding: 20px;
     -fx-spacing: 25px;
 }
@@ -51,6 +54,7 @@
     -fx-border-color: black;
     -fx-border-width: 1px;
     -fx-padding: 5px;
+    -fx-background-color: white;
 }
 
 .campoNombre {
@@ -63,8 +67,8 @@
 }
 
 .agregarSi {
-    -fx-pref-width: 75px;
-    -fx-pref-height: 75px;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
     -fx-background-image: url("/img/si.png");
     -fx-background-size: cover;
     -fx-background-color: transparent;
@@ -78,8 +82,8 @@
 }
 
 .agregarNo {
-    -fx-pref-width: 75px;
-    -fx-pref-height: 75px;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
     -fx-background-image: url("/img/no.png");
     -fx-background-size: cover;
     -fx-background-color: transparent;
@@ -93,8 +97,8 @@
 }
 
 .reset {
-    -fx-pref-width: 75px;
-    -fx-pref-height: 75px;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
     -fx-background-image: url("/img/reset.png");
     -fx-background-size: cover;
     -fx-background-color: transparent;

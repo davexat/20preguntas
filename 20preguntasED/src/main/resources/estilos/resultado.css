@@ -2,6 +2,8 @@
     -fx-pref-width: 1280px;
     -fx-pref-height: 720px;
     -fx-alignment: center;
+    -fx-background-image: url("/img/fondoResultado.png");
+    -fx-background-size: cover;
 }
 
 .cajaBotones {
