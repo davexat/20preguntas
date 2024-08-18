@@ -38,7 +38,8 @@ public class LectorRespuesta {
             a.show();
             return null;
         } catch (IOException ex) {
-            System.out.println(ex.getStackTrace());
+            Alert a = new Alert(Alert.AlertType.ERROR, "ERROR FATLA. Verificar, por favor.");
+            a.show();
         }
         return mapa;
     }

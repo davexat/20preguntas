@@ -31,9 +31,6 @@ public class CargaController implements Initializable {
     private Button cargarRespuestas;
     @FXML
     private Button continuar;
-    
-    static File txtFilePreguntas;
-    static File txtFileRespuestas;
     @FXML
     private Label lblPreguntas;
     @FXML
@@ -43,11 +40,9 @@ public class CargaController implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        txtFilePreguntas = new File("src/main/resources/files/preguntas.txt");
-        txtFileRespuestas = new File("src/main/resources/files/respuestas.txt");
-        lblPreguntas.setText(txtFilePreguntas.getName());
-        lblRespuestas.setText(txtFileRespuestas.getName());
+    public void initialize(URL url, ResourceBundle rb) { 
+        lblPreguntas.setText(App.txtFilePreguntas.getName());
+        lblRespuestas.setText(App.txtFileRespuestas.getName());
         DatosController.nuevoAnimal = false;
     }    
     
@@ -61,27 +56,19 @@ public class CargaController implements Initializable {
         if (file != null) {
             if(event.getSource().equals(cargarPreguntas)){
                 lblPreguntas.setText(file.getName());
-                txtFilePreguntas = file;
+                App.txtFilePreguntas = file;
             }else{
                 lblRespuestas.setText(file.getName());
-                txtFileRespuestas = file;
+                App.txtFileRespuestas = file;
             }
-        } else {
-            if(event.getSource().equals(cargarPreguntas)){
-                lblPreguntas.setText("No file selected");
-                txtFilePreguntas = null;
-            }else{
-                lblRespuestas.setText("No file selected");
-                txtFilePreguntas = null;
-            }
-        }
+        } 
     }
 
     @FXML
     private void next(ActionEvent event) {
         try {
             ArbolCreator ac = new ArbolCreator();
-            ac.crearArbol(txtFilePreguntas.getPath(), txtFileRespuestas.getPath());
+            ac.crearArbol(App.txtFilePreguntas.getPath(), App.txtFileRespuestas.getPath());
             if(ac.validarContinuacion()){
                 JuegoController.arbol = ac.getArbol();
                 App.setRoot("seleccion");

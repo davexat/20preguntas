@@ -2,6 +2,7 @@ package sistema;
 
 import TDA.ArbolDecisionPRS;
 import clases.ArbolCreator;
+import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,8 @@ import javafx.scene.image.Image;
 public class App extends Application {
 
     private static Scene scene;
+    public static File txtFilePreguntas = new File("src/main/resources/files/preguntas.txt");
+    public static File txtFileRespuestas = new File("src/main/resources/files/respuestas.txt");;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -31,7 +34,7 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml).load());
     }
-
+    
     public static FXMLLoader loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader;

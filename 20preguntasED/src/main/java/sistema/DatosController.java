@@ -60,7 +60,7 @@ public class DatosController implements Initializable {
     }
     private void cargarPreguntas(){
         cajaPreguntas.getChildren().clear();
-        PilaPRS<String> preguntas = new LectorPreguntas().leerArchivo(CargaController.txtFilePreguntas.getPath());
+        PilaPRS<String> preguntas = new LectorPreguntas().leerArchivo(App.txtFilePreguntas.getPath());
         preguntas.pop();
         for (String p: preguntas){
             Label l = new Label(p);
@@ -139,7 +139,7 @@ public class DatosController implements Initializable {
         }
     }
     private void agregarAlArchivo(String s){
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(CargaController.txtFileRespuestas, true))){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(App.txtFileRespuestas, true))){
             bw.write("\n"+s);
         } catch (IOException ex) {
             ex.printStackTrace();
