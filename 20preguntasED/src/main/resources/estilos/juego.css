@@ -15,7 +15,7 @@
 .cajaOpciones {
     -fx-pref-width: 1280px;
     -fx-alignment: center;
-    -fx-spacing: 50px;
+    -fx-spacing: 100px;
 }
 
 .botonSi {

@@ -3,6 +3,8 @@
     -fx-pref-height: 720px;
     -fx-alignment: center;
     -fx-spacing: 200px;
+    -fx-background-image: url("/img/fondoAgregar.png");
+    -fx-background-size: cover;
 }
 
 .contenedorLabels {

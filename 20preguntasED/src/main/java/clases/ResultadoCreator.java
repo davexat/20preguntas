@@ -49,10 +49,10 @@ public class ResultadoCreator {
         vbox.setPrefHeight(360);
         vbox.setPadding(new Insets(10, 10, 20, 10));
         vbox.setAlignment(Pos.CENTER);
-        vbox.setStyle("-fx-background-color: #f0f0f0; "
+        vbox.setStyle("-fx-background-color: white; "
                       + "-fx-border-color: black; "
                       + "-fx-border-width: 2px; "
-                      + "-fx-spacing: 25px;");
+                      + "-fx-spacing: 24px;");
     }
     private void decorarLabel(Label label){
         label.setFont(Font.font("monospace", FontWeight.BOLD, 35));
@@ -68,6 +68,8 @@ public class ResultadoCreator {
         }catch(Exception e){
             img = new ImageView(new Image("file:" + pathExterna + "default.png"));
         }
+        img.setStyle("-fx-border-color: black; "
+                      + "-fx-border-width: 1px; ");
         return img;
     }
     public CircularListPRS<VBox> getResultados(){
