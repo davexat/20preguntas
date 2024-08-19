@@ -38,7 +38,7 @@ public class LectorRespuesta {
             a.show();
             return null;
         } catch (IOException ex) {
-            Alert a = new Alert(Alert.AlertType.ERROR, "ERROR FATLA. Verificar, por favor.");
+            Alert a = new Alert(Alert.AlertType.ERROR, "ERROR FATAL. Verificar, por favor.");
             a.show();
         }
         return mapa;
