@@ -36,7 +36,6 @@ public class LectorPreguntas {
             System.out.println(ex.getMessage());
             return null;
         }
-        pila.push("null");
         return pila;
     }
 }

@@ -11,7 +11,7 @@
         <VBox styleClass="contenedorLabels">
             <children>
                 <Label fx:id="info" text="No se ha encontrado su animal" styleClass="info"/>
-                <Label fx:id="info" text="¿Desea agregarlo?" styleClass="info"/>
+                <Label text="¿Desea agregarlo?" styleClass="info"/>
             </children>
         </VBox>
         <HBox styleClass="cajaBotones">

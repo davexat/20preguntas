@@ -1,20 +1,20 @@
 1. ¿Es un mamífero?
 2. ¿Es un animal doméstico?
 3. ¿Tiene plumas?
-4. ¿Es un animal que puede volar?
-5. ¿Vive en el agua?
-6. ¿Es conocido por su velocidad?
-7. ¿Es pequeño en tamaño?
-8. ¿Tiene cuatro patas?
-9. ¿Es carnívoro?
-10. ¿Es herbívoro?
-11. ¿Es un insecto?
-12. ¿Vive en el desierto?
-13. ¿Es un animal nocturno?
-14. ¿Vive en la selva?
-15. ¿Tiene cuernos?
-16. ¿Es un animal que hiberna?
-17. ¿Es un reptil?
-18. ¿Tiene caparazón?
-19. ¿Vive mucho tiempo?
-20. ¿Es venenoso?
+¿Es un animal que puede volar?
+¿Vive en el agua?
+¿Es conocido por su velocidad?
+¿Es pequeño en tamaño?
+¿Tiene cuatro patas?
+¿Es carnívoro?
+¿Es herbívoro?
+¿Es un insecto?
+¿Vive en el desierto?
+¿Es un animal nocturno?
+¿Vive en la selva?
+¿Tiene cuernos?
+¿Es un animal que hiberna?
+¿Es un reptil?
+¿Tiene caparazón?
+¿Vive mucho tiempo?
+¿Es venenoso?

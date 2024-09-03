@@ -43,21 +43,16 @@ public class ArbolDecisionPRS<P,R> {
         int alturaDer = (raiz.der == null) ? 0 : raiz.der.getAltura();
         return 1 + Math.max(alturaIzq, alturaDer);
     }
-    public boolean addPreguntasRespuestas(PilaPRS<P> preguntas, Map<R, PilaPRS<Boolean>> respuestas){
-        if (preguntas == null || respuestas == null) return false;
-        if (preguntas.isEmpty()) return false;
-        // Sacar la primera pregunta
+    public void addPreguntasRespuestas(PilaPRS<P> preguntas, Map<R, PilaPRS<Boolean>> respuestas){
+        // Fase de validación
+        if (preguntas == null || respuestas == null) return;
+        if (preguntas.isEmpty()) return;
+        // Fase de creación de nuevo Nodo
         P p = preguntas.poll();
-        // Sacar el primer conjunto de respuestas
         Set<R> answers = respuestas.keySet();
-        PilaPRS<R> pila = new PilaPRS<>();
-        pila.addAll(answers);
-        // Reemplazar la rama por la primera pregunta y la primera respuesta
         raiz = new Node(p);
-        this.respuestas = pila;
-        // Extraer las primeras respuestas de cada pregunta (si es posible)
-        // Si no es posible, no hacer nada
-        // Verificar si es true o false para crear dos mapas diferentes
+        this.respuestas.addAll(answers);
+        // Fase de separación y preparación
         Map<R, PilaPRS<Boolean>> mapaTrue = new HashMap<>();
         Map<R, PilaPRS<Boolean>> mapaFalse = new HashMap<>();
         for (R r: answers){
@@ -68,6 +63,7 @@ public class ArbolDecisionPRS<P,R> {
                 else    mapaFalse.put(r, datos);
             }
         }
+        // Llamada recursiva
         if (!preguntas.isEmpty()){
             PilaPRS<P> preguntasIzq = new PilaPRS<>();
             preguntasIzq.addAll(preguntas);
@@ -77,11 +73,15 @@ public class ArbolDecisionPRS<P,R> {
             raiz.der = new ArbolDecisionPRS<>();
             raiz.der.addPreguntasRespuestas(preguntasDer, mapaFalse);
             raiz.izq.addPreguntasRespuestas(preguntasIzq, mapaTrue);
+        }else{
+            raiz.izq = new ArbolDecisionPRS<>();
+            raiz.der = new ArbolDecisionPRS<>();
+            raiz.der.respuestas.addAll(mapaFalse.keySet());
+            raiz.izq.respuestas.addAll(mapaTrue.keySet());
         }
-        return true;
     }
     public ArbolDecisionPRS(){
-        raiz = null;
+        raiz = new Node(null);
         respuestas = new PilaPRS<>();
     }
     public ArbolDecisionPRS(P p){
